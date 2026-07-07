@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Zamzam Time — Приватный помощник намаза | b0w9r</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="public/manifest.json">
+
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="public/favicon-32x32.png">
+</head>
+
+<body>
+    <!-- Частицы -->
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="app-container">
+        <div class="header">
+            <span class="logo-icon"><img src="public/android-chrome-192x192.png" alt=""></span>
+            <h1>Zamzam Time</h1>
+        </div>
+
+        <div class="privacy-badge">
+            <i class="fa-solid fa-lock"></i> Ваши данные остаются на устройстве
+        </div>
+
+        <div class="location-row">
+            <button class="geo-btn" id="geoBtn">
+                <span><i class="fa-solid fa-location-dot"></i></span> Разрешить геолокацию
+            </button>
+            <span class="city-display" id="cityDisplay"></span>
+            <input type="text" class="manual-city-input" id="manualCityInput" placeholder="Введите город">
+        </div>
+
+        <div class="next-prayer-box">
+            <div class="next-prayer-name" id="nextPrayerLabel">Следующий: ...</div>
+            <div class="countdown-ring" id="countdownRing">
+                <div class="countdown-number" id="countdownDisplay">--/--/--</div>
+            </div>
+            <div class="next-time" id="nextTimeDisplay"></div>
+        </div>
+
+        <div class="prayer-list" id="prayerList"></div>
+
+        <div class="progress-section">
+            <div class="progress-label">
+                <span>Дневной прогресс</span>
+                <span id="progressText">0/5</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <div class="theme-toggle">
+            <button class="theme-btn" id="themeToggle">☀️ Светлая тема</button>
+        </div>
+
+        <button class="share-btn" id="shareBtn"><i class="fa-solid fa-arrow-up-from-bracket"></i> Поделиться расписанием</button>
+
+        <div class="arabic-footer">bakhtovar0924@gmail.com</div>
+    </div>
+
+    <!-- Библиотека Adhan -->
+    <script src="https://cdn.jsdelivr.net/npm/adhan@4.4.3/lib/bundles/adhan.umd.min.js"></script>
+    <script src="app.js" defer></script>
+</body>
+
+</html>
